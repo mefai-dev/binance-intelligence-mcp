@@ -17,8 +17,8 @@ DEFAULT_SYMBOLS = [
 
 # Proxy routing for geo-restricted environments
 # Maps Binance API path prefixes to proxy base URLs
-_PROXY_FRANKFURT = "http://REDACTED:9500"
-_PROXY_AUTOTRADE = "http://REDACTED:9500"
+_PROXY_FRANKFURT = os.environ.get("MEFAI_PROXY_FRANKFURT", "")
+_PROXY_AUTOTRADE = os.environ.get("MEFAI_PROXY_AUTOTRADE", "")
 _PROXY_TESTNET = "https://testnet.binancefuture.com"
 
 # Path → (proxy_base, rewritten_path_or_None)
