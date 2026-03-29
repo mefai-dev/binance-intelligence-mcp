@@ -68,12 +68,12 @@ Or with Python module:
 | 4 | `smart_money_radar` | 6-factor smart money composite score | topLongShortPositionRatio, topLongShortAccountRatio, globalLongShortAccountRatio, takerBuySellRatio, openInterestHist, klines |
 | 5 | `scan_candlestick_patterns` | Classic pattern detection with confidence scores | klines |
 | 6 | `compute_correlation_matrix` | Pearson correlation between trading pairs | klines |
-| 7 | `classify_market_regime` | ADX/ATR-based regime classification | klines, premiumIndex |
-| 8 | `backtest_dca` | DCA vs lump-sum backtester | klines |
+| 7 | `classify_market_regime` | ADX and ATR based regime classification | klines, premiumIndex |
+| 8 | `backtest_dca` | DCA vs lump sum backtester | klines |
 | 9 | `scan_funding_rates` | Funding rate heatmap across all futures pairs | premiumIndex, fundingInfo |
 | 10 | `detect_funding_extremes` | Extreme funding rate arbitrage opportunities | premiumIndex, fundingInfo |
 | 11 | `analyze_funding_history` | Historical funding rate analysis for a symbol | fundingRate |
-| 12 | `scan_basis_spread` | Spot-futures basis spread (contango/backwardation) | premiumIndex |
+| 12 | `scan_basis_spread` | Spot futures basis spread (contango/backwardation) | premiumIndex |
 
 ### Tool Details
 
@@ -84,7 +84,7 @@ Detects smart accumulation by combining volume analysis, open interest trends, f
 **Parameters:**
 - `symbols` (list[str], optional): Trading pairs. Default: top 12 futures pairs.
 
-**Sub-scores:**
+**Sub scores:**
 - `volume_surge`: Current volume vs 20-period average
 - `oi_buildup`: Open interest linear regression trend
 - `stealth_mode`: Funding rate closeness to zero
@@ -214,7 +214,7 @@ Classifies each symbol into one of four regimes using ADX, ATR, and volume analy
 
 #### 8. `backtest_dca`
 
-Backtests Dollar-Cost Averaging vs lump-sum investing over historical data.
+Backtests Dollar-Cost Averaging vs lump sum investing over historical data.
 
 **Parameters:**
 - `symbol` (str): Default: "BTCUSDT".
