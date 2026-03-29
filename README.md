@@ -1,5 +1,8 @@
 # binance-intelligence-mcp
 
+[![CI](https://github.com/mefai-dev/binance-intelligence-mcp/actions/workflows/ci.yml/badge.svg)](https://github.com/mefai-dev/binance-intelligence-mcp/actions/workflows/ci.yml)
+
+
 MCP server providing 12 computed intelligence tools for Binance. Unlike raw API wrappers, each tool combines multiple Binance endpoints into derived analytics — accumulation detection, whale tracking, market impact simulation, smart money radar, candlestick pattern scanning, correlation matrix, regime classification, DCA backtesting, funding rate scanning, funding extremes detection, funding history analysis, and basis spread scanning.
 
 **No API keys needed** — all tools use public Binance endpoints.
