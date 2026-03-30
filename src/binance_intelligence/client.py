@@ -189,3 +189,23 @@ class BinanceClient:
             FUTURES_BASE, "/futures/data/takerlongshortRatio",
             {"symbol": symbol, "period": period, "limit": limit},
         )
+
+
+WEIGHT_LIMITS = {
+    "klines": 2,
+    "depth": 5,
+    "trades": 2,
+    "ticker": 2,
+    "avgPrice": 2,
+}
+
+def estimate_weight(endpoint: str, params: dict = None) -> int:
+    """Estimate the request weight for rate limit tracking."""
+    base = WEIGHT_LIMITS.get(endpoint, 1)
+    if params and "limit" in params:
+        limit = int(params["limit"])
+        if limit > 500:
+            base *= 2
+        if limit > 1000:
+            base *= 5
+    return base
