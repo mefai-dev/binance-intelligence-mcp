@@ -3,9 +3,9 @@
 [![CI](https://github.com/mefai-dev/binance-intelligence-mcp/actions/workflows/ci.yml/badge.svg)](https://github.com/mefai-dev/binance-intelligence-mcp/actions/workflows/ci.yml)
 
 
-MCP server providing 12 computed intelligence tools for Binance. Unlike raw API wrappers, each tool combines multiple Binance endpoints into derived analytics — accumulation detection, whale tracking, market impact simulation, smart money radar, candlestick pattern scanning, correlation matrix, regime classification, DCA backtesting, funding rate scanning, funding extremes detection, funding history analysis, and basis spread scanning.
+MCP server providing 12 computed intelligence tools for Binance. Unlike raw API wrappers, each tool combines multiple Binance endpoints into derived analytics ··· accumulation detection, whale tracking, market impact simulation, smart money radar, candlestick pattern scanning, correlation matrix, regime classification, DCA backtesting, funding rate scanning, funding extremes detection, funding history analysis, and basis spread scanning.
 
-**No API keys needed** — all tools use public Binance endpoints.
+**No API keys needed** ··· all tools use public Binance endpoints.
 
 ## Installation
 
@@ -261,33 +261,33 @@ Scans spot-futures basis spread across all pairs, identifying contango and backw
 ## Architecture
 
 ```
-┌─────────────────────────────────────────────────┐
-│                 MCP Client                       │
-│         (any MCP-compatible client)              │
-└──────────────────┬──────────────────────────────┘
-                   │ stdio (JSON-RPC)
-┌──────────────────▼──────────────────────────────┐
-│              server.py (FastMCP)                  │
-│        12 @mcp.tool() functions                  │
-└──────────────────┬──────────────────────────────┘
-                   │
-┌──────────────────▼──────────────────────────────┐
-│              tools/*.py                          │
-│   Pure async functions with scoring algorithms   │
-│                                                  │
-│  accumulation │ whale    │ impact   │ smart_money │
-│  patterns     │ correlation │ regime │ dca        │
-└──────────────────┬──────────────────────────────┘
-                   │
-┌──────────────────▼──────────────────────────────┐
-│            client.py (BinanceClient)             │
-│   Async aiohttp │ Rate limiting │ No API key     │
-└──────────────────┬──────────────────────────────┘
-                   │ HTTPS
-┌──────────────────▼──────────────────────────────┐
-│         Binance Public API                       │
-│   api.binance.com │ fapi.binance.com             │
-└─────────────────────────────────────────────────┘
+··�·····················································································································································�
+··�                 MCP Client                       ··�
+··�         (any MCP-compatible client)              ··�
+···························································�····························································································�
+                   ··� stdio (JSON-RPC)
+··�·······················································��····························································································�
+··�              server.py (FastMCP)                  ··�
+··�        12 @mcp.tool() functions                  ··�
+···························································�····························································································�
+                   ··�
+··�·······················································��····························································································�
+··�              tools/*.py                          ··�
+··�   Pure async functions with scoring algorithms   ··�
+··�                                                  ··�
+··�  accumulation ··� whale    ··� impact   ··� smart_money ··�
+··�  patterns     ··� correlation ··� regime ··� dca        ··�
+···························································�····························································································�
+                   ··�
+··�·······················································��····························································································�
+··�            client.py (BinanceClient)             ··�
+··�   Async aiohttp ··� Rate limiting ··� No API key     ··�
+···························································�····························································································�
+                   ··� HTTPS
+··�·······················································��····························································································�
+··�         Binance Public API                       ··�
+··�   api.binance.com ··� fapi.binance.com             ··�
+························································································································································�
 ```
 
 ## Binance Endpoints Used
@@ -325,7 +325,7 @@ Run tests:
 pytest tests/ -v
 ```
 
-All tests are mock-based — no API keys or network access needed.
+All tests are mock-based ··· no API keys or network access needed.
 
 ## License
 

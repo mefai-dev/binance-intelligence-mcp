@@ -5,7 +5,7 @@ build-backend = "hatchling.build"
 [project]
 name = "binance-intelligence-mcp"
 version = "1.1.0"
-description = "MCP server providing 12 computed intelligence tools for Binance — accumulation detection, whale tracking, market impact simulation, smart money radar, pattern scanning, correlation matrix, regime classification, DCA backtesting, funding rate scanning, funding extremes detection, funding history analysis, and basis spread scanning."
+description = "MCP server providing 12 computed intelligence tools for Binance ··· accumulation detection, whale tracking, market impact simulation, smart money radar, pattern scanning, correlation matrix, regime classification, DCA backtesting, funding rate scanning, funding extremes detection, funding history analysis, and basis spread scanning."
 readme = "README.md"
 license = "MIT"
 requires-python = ">=3.10"

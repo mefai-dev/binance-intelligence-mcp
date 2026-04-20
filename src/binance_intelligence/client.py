@@ -1,4 +1,4 @@
-"""Async Binance API client — public endpoints only, no API key needed."""
+"""Async Binance API client ··· public endpoints only, no API key needed."""
 
 import asyncio
 import os
@@ -21,7 +21,7 @@ _PROXY_FRANKFURT = os.environ.get("MEFAI_PROXY_FRANKFURT", "")
 _PROXY_AUTOTRADE = os.environ.get("MEFAI_PROXY_AUTOTRADE", "")
 _PROXY_TESTNET = "https://testnet.binancefuture.com"
 
-# Path → (proxy_base, rewritten_path_or_None)
+# Path ·�� (proxy_base, rewritten_path_or_None)
 _PROXY_ROUTES: dict[str, tuple[str, str | None]] = {
     "/fapi/v1/klines": (_PROXY_FRANKFURT, "/fapi/klines"),
     "/fapi/v1/premiumIndex": (_PROXY_FRANKFURT, "/fapi/premiumIndex"),
@@ -81,7 +81,7 @@ class BinanceClient:
                 resp.raise_for_status()
                 return await resp.json()
 
-    # ── Spot endpoints ──
+    # ······ Spot endpoints ······
 
     async def spot_klines(
         self, symbol: str, interval: str = "4h", limit: int = 30
@@ -92,7 +92,7 @@ class BinanceClient:
             {"symbol": symbol, "interval": interval, "limit": limit},
         )
 
-    # ── Futures endpoints ──
+    # ······ Futures endpoints ······
 
     async def klines(
         self, symbol: str, interval: str = "4h", limit: int = 30

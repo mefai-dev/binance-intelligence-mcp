@@ -1,4 +1,4 @@
-"""Binance Intelligence MCP Server — 12 computed intelligence tools for Binance."""
+"""Binance Intelligence MCP Server ··· 12 computed intelligence tools for Binance."""
 
 __version__ = "1.1.0"
 

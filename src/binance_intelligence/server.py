@@ -90,7 +90,7 @@ async def simulate_market_impact_tool(
 
     Args:
         symbol: Trading pair (e.g., BTCUSDT)
-        side: Order side — BUY or SELL
+        side: Order side ··· BUY or SELL
         amount_usd: Order size in USD
 
     Returns:
@@ -148,7 +148,7 @@ async def scan_candlestick_patterns_tool(
 
     Args:
         symbols: List of trading pairs (default: top 12 futures pairs)
-        interval: Candlestick interval — "1h" or "4h" (default: "4h")
+        interval: Candlestick interval ··· "1h" or "4h" (default: "4h")
 
     Returns:
         Per-symbol detected patterns with type, direction, and confidence.

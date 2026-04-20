@@ -4,12 +4,12 @@ Combines 6 data sources into individual factor scores (-1 to +1),
 then produces a weighted composite score (0-100).
 
 Factors:
-  1. Top Trader Position Ratio — are top traders net long or short?
-  2. Top Trader Account Ratio — what fraction of top accounts are long?
-  3. Global L/S Account Ratio — retail sentiment
-  4. Taker Buy/Sell Ratio — aggressive market orders direction
-  5. Open Interest Trend — is money flowing in or out?
-  6. Price Momentum — recent price change direction
+  1. Top Trader Position Ratio ··· are top traders net long or short?
+  2. Top Trader Account Ratio ··· what fraction of top accounts are long?
+  3. Global L/S Account Ratio ··· retail sentiment
+  4. Taker Buy/Sell Ratio ··· aggressive market orders direction
+  5. Open Interest Trend ··· is money flowing in or out?
+  6. Price Momentum ··· recent price change direction
 """
 
 import asyncio

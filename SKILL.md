@@ -14,7 +14,7 @@ license: MIT
 
 # binance-intelligence-mcp
 
-A Python MCP server that provides **8 computed intelligence tools** for Binance futures markets. Each tool combines 2-6 Binance API endpoints into derived analytics with composite scoring algorithms — not just raw data forwarding.
+A Python MCP server that provides **8 computed intelligence tools** for Binance futures markets. Each tool combines 2-6 Binance API endpoints into derived analytics with composite scoring algorithms ··· not just raw data forwarding.
 
 ## Why This Is Different
 
@@ -158,15 +158,15 @@ Backtests DCA strategy vs lump-sum investing over historical data.
 
 All endpoints are public (no API key required):
 
-- `/fapi/v1/klines` — Candlestick/kline data
-- `/fapi/v1/aggTrades` — Aggregate trades
-- `/fapi/v1/depth` — Order book
-- `/fapi/v1/premiumIndex` — Funding rate
-- `/futures/data/openInterestHist` — Open interest history
-- `/futures/data/topLongShortPositionRatio` — Top trader positions
-- `/futures/data/topLongShortAccountRatio` — Top trader accounts
-- `/futures/data/globalLongShortAccountRatio` — Global sentiment
-- `/futures/data/takerlongshortRatio` — Taker buy/sell volume
+- `/fapi/v1/klines` ··· Candlestick/kline data
+- `/fapi/v1/aggTrades` ··· Aggregate trades
+- `/fapi/v1/depth` ··· Order book
+- `/fapi/v1/premiumIndex` ··· Funding rate
+- `/futures/data/openInterestHist` ··· Open interest history
+- `/futures/data/topLongShortPositionRatio` ··· Top trader positions
+- `/futures/data/topLongShortAccountRatio` ··· Top trader accounts
+- `/futures/data/globalLongShortAccountRatio` ··· Global sentiment
+- `/futures/data/takerlongshortRatio` ··· Taker buy/sell volume
 
 ## Testing
 
@@ -179,13 +179,13 @@ pytest tests/ -v
 ## Architecture
 
 ```
-MCP Client → stdio → server.py (FastMCP, 8 tools)
-                        → tools/*.py (scoring algorithms)
-                          → client.py (async aiohttp)
-                            → Binance Public API
+MCP Client ·�� stdio ·�� server.py (FastMCP, 8 tools)
+                        ·�� tools/*.py (scoring algorithms)
+                          ·�� client.py (async aiohttp)
+                            ·�� Binance Public API
 ```
 
-Each tool module is a pure async function: `(client, params) → dict`. The server module wraps these with `@mcp.tool()` decorators and manages client lifecycle.
+Each tool module is a pure async function: `(client, params) ·�� dict`. The server module wraps these with `@mcp.tool()` decorators and manages client lifecycle.
 
 ## Use Cases
 
